@@ -1,1 +1,21 @@
-<h1> HI <h1>
+<html>
+<head>
+<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $.getJSON('probe.json',function(data){
+            console.log('success');
+            $.each(data,function(i,device){
+                $('ul').append('<li>'+device.User ID+' '+device.MAC Address+'</li>');
+            });
+        }).error(function(){
+            console.log('error');
+        });
+    });
+</script>
+</head>
+<body>
+Script should be above this ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    <ul></ul>
+</body>
+</html>
