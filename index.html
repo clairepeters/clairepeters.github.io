@@ -6,7 +6,7 @@
         $.getJSON('probe.json',function(data){
             console.log('success');
             $.each(data,function(i,device){
-                $('ul').append('<li>'+device.User ID+' '+device.MAC Address+'</li>');
+                $('ul').append('<li>'+device.UserID+' '+device.MACAddress+'</li>');
             });
         }).error(function(){
             console.log('error');
